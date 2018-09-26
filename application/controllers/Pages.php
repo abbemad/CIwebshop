@@ -12,3 +12,5 @@
             $this->load->view('templates/footer');
         }
     }
+
+    // pages 
