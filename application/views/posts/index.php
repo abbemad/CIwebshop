@@ -7,7 +7,7 @@
         <br>
             <?php echo $post['body']; ?> 
             <br>
-                <p><a class="btn btn-default" href="<?php echo site_url('/posts/'.$post['slug']); ?>">
+                <p><a class="btn btn-primary" href="<?php echo site_url('/posts/'.$post['slug']); ?>">
                         Read more 
                     </a>
                 </p>
