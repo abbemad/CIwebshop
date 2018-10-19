@@ -10,7 +10,7 @@
   </div>
   <div class="form-group">
     <label>Body</label>
-    <textarea type="password" class="form-control" name="body" placeholder="Add body"><?php echo $post['body'];?></textarea>
+    <textarea id="editor" type="password" class="form-control" name="body" placeholder="Add body"><?php echo $post['body'];?></textarea>
   </div>
 
   <button type="submit" class="btn btn-default">Submit</button>
