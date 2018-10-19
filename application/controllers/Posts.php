@@ -33,7 +33,7 @@
             $data['title'] ='Create post';
             
             $data['categories'] = $this->post_model->get_categories();
-            
+
             $this->form_validation->set_rules('title', 'Title', 'required');
             $this->form_validation->set_rules('body', 'Body', 'required');
 
@@ -56,6 +56,8 @@
         }
 
         public function edit($slug){
+
+            $data['categories'] = $this->post_model->get_categories();
             $data['post'] = $this->post_model->get_posts($slug);
             
         
