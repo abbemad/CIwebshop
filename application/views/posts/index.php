@@ -3,7 +3,13 @@
 <?php foreach($posts as $post) : ?>
 
     <h3><?php echo $post['title']; ?></h3>
-        <small class="post-date">Posted: <?php echo $post['created_at']; ?> in <strong> <?php echo $post['name']; ?> </strong> </small> 
+    <div class="row">
+    <div class="col-md-3">
+    <img src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image']; ?>">
+    </div>
+
+    <div class="col-md-9">
+    <small class="post-date">Posted: <?php echo $post['created_at']; ?> in <strong> <?php echo $post['name']; ?> </strong> </small> 
         <br>
             <?php echo word_limiter($post['body'], 50); ?> 
             <br>
@@ -11,4 +17,8 @@
                         Read more 
                     </a>
                 </p>
+    </div>
+    </div>
+
+ 
 <?php endforeach; ?>
