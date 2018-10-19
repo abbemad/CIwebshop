@@ -12,13 +12,16 @@
     <textarea id="editor" type="password" class="form-control" name="body" placeholder="Add body"></textarea>
   </div>
   <div class="form-group">
-  <label>Category</label>
-    <select name="category_id" class="form-control">
-      <?php foreach($categories as $category):?>
-        <option value="<?php echo $category['id'];  ?>"><?php echo $category['name']; ?> </option>
-      <?php endforeach;?>
-    </select>
+    <label>Category</label>
+      <select name="category_id" class="form-control">
+        <?php foreach($categories as $category):?>
+          <option value="<?php echo $category['id'];  ?>"><?php echo $category['name']; ?> </option>
+        <?php endforeach;?>
+      </select>
   </div>
-
+  <div class="form-group">
+    <label>Upload image</label>
+      <input type="file" name="postimage" size="20">
+  </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
