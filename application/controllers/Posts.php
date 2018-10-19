@@ -57,7 +57,7 @@
                     $post_image = 'noimage.jpg';
                 } else {
                     $data = array('upload_date' => $this->upload->data());
-                    $post_image = $_FILES['postimage'] ['name'];
+                    $post_image = $_FILES['userfile'] ['name'];
                 }
 
                $this->post_model->create_post($post_image);
