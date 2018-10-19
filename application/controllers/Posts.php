@@ -60,7 +60,7 @@
                     $post_image = $_FILES['postimage'] ['name'];
                 }
 
-               $this->post_model->create_post();
+               $this->post_model->create_post($post_image);
                redirect('posts');
             }
 

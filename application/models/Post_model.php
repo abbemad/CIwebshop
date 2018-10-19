@@ -16,14 +16,16 @@
             return $query->row_array();
         }
 
-        public function create_post(){
+        public function create_post($post_image){
             $slug = url_title($this->input->post('title'));
 
             $data = array(
                 'title' => $this->input->post('title'),
                 'slug' => $slug, 
                 'body' => $this->input->post('body'), 
-                'category_id' => $this->input->post('category_id')
+                'category_id' => $this->input->post('category_id'),
+                'post_image' => $post_image
+
             );
 
             return $this->db->insert('posts', $data);
