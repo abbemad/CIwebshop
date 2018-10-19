@@ -5,7 +5,7 @@
     <h3><?php echo $post['title']; ?></h3>
         <small class="post-date">Posted: <?php echo $post['created_at']; ?> </small> 
         <br>
-            <?php echo $post['body']; ?> 
+            <?php echo word_limiter($post['body'], 50); ?> 
             <br>
                 <p><a class="btn btn-primary" href="<?php echo site_url('/posts/'.$post['slug']); ?>">
                         Read more 
