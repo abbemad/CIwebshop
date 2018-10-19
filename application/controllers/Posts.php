@@ -43,6 +43,8 @@
                 $this->load->view('posts/create', $data);
                 $this->load->view('templates/footer');
             } else {
+                // upload an image
+                $config['upload_path'] = './assets/images/posts';
                $this->post_model->create_post();
                redirect('posts');
             }
