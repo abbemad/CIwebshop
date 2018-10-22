@@ -17,4 +17,9 @@
 
             return $this->db->insert('categories', $data);
         }
+
+        public function get_category($id){
+            $query = $this->db->get_where('categories', array('id' => $id));
+            return $query->row();
+        }
     }
