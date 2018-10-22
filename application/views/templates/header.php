@@ -24,6 +24,7 @@
 
                     <ul class= "nav navbar-nav navbar-right">
                         <li><a href="<?php echo base_url(); ?>posts/create">Create Post</a></li>
+                        <li><a href="<?php echo base_url(); ?>categories/create">Create Category</a></li>
                     </ul>
                 </div>
             </div>
