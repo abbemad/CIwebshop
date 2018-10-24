@@ -15,6 +15,9 @@
 
         public function view($slug = NULL){
             $data['post'] = $this->post_model->get_posts($slug);
+
+            $post_id = $data['post']['id'];
+            $data['comments'] = $this->comment_model->get_comments($post_id);
             
         
             if(empty($data['post'])){

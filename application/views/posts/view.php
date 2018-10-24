@@ -15,8 +15,17 @@
 </form>
 
 <hr>
-<h3>Add Comment </h3>
+<h3>Comments</h3>
+<?php if($comments) : ?>
+    <?php foreach ($comments as $comment): ?>
+        <h5><?php echo $comment['body']; ?> by <strong><?php echo $comment['name'];?></strong></h5>
+    <?php endforeach; ?>
+<?php else : ?>
+    <p>No Comments Display</p>
+<?php endif; ?>
 
+<hr>
+<h3>Add Comment </h3>
 <?php echo validation_errors(); ?>
 
 <?php echo form_open('comments/create/'.$post['id']); ?>
