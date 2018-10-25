@@ -34,4 +34,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 
-<?php echo form_closed(); ?>
+<?php echo form_close(); ?>
