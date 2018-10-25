@@ -18,6 +18,14 @@
                 
             } else{
 
+                //encrypt pass NOT use MD5
+                $enc_password = password_hash($this->input->post('password'), PASSWORD_DEFAULT); 
+
+                $this->user_model->register($enc_password);
+
+                $this->session->set_flashdata('user_registered', 'You are now registered and are able to login');
+
+                redirect('posts');
             }
         }
     }
