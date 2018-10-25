@@ -1,6 +1,6 @@
 <?php 
     class User_model extends CI_Model{
-        public function  __construct($enc_password){
+        public function register($enc_password){
             // data array
 
             $data = array(
