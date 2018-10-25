@@ -64,6 +64,9 @@
                 }
 
                $this->post_model->create_post($post_image);
+
+               // create flashmessage
+               $this->session->set_flashdata('post_created', 'Your post has been created');
                redirect('posts');
             }
 
@@ -96,6 +99,7 @@
             
             $this->post_model->update_post();
 
+            $this->session->set_flashdata('post_updated', 'Your post has been updated');
             redirect('posts');
         }
     }
