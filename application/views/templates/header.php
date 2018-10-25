@@ -26,11 +26,18 @@
                     </ul>
 
                     <ul class= "nav navbar-nav navbar-right">
+                        <li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
+
                         <li><a href="<?php echo base_url(); ?>posts/create">Create Post</a></li>
                         <li><a href="<?php echo base_url(); ?>categories/create">Create Category</a></li>
+                        
                     </ul>
                 </div>
             </div>
         </nav>
 
         <div class="container">
+            <!-- Flashmessage -->
+        <?php if ($this->session->flashdata('user_registered')) : ?>
+            <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_registered').'</p>'; ?>
+        <?php endif; ?>
