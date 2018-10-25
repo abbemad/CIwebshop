@@ -75,6 +75,9 @@
 
         public function delete($id){
             $this->post_model->delete_post($id);
+
+            $this->session->set_flashdata('post_deleted', 'Your post has been deleted');
+
             redirect('posts');
         }
 
