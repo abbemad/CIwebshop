@@ -1,6 +1,6 @@
 <?php
     class Users extends CI_Controller{
-
+        //register 
         public function register(){
             $data['title'] = 'Sign Up';
 
@@ -24,6 +24,27 @@
                 $this->user_model->register($enc_password);
 
                 $this->session->set_flashdata('user_registered', 'You are now registered and are able to login');
+
+                redirect('posts');
+            }
+        }
+        //login user
+        public function login(){
+            $data['title'] = 'Sign In';
+
+            $this->form_validation->set_rules('username', 'Username', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required');
+            $this->form_validation->set_rules('password', 'Password', 'required');
+
+            if($this->form_validation->run() === FALSE){
+                $this->load->view('templates/header');
+                $this->load->view('users/login', $data);
+                $this->load->view('templates/footer');
+
+                
+            } else{
+
+                $this->session->set_flashdata('user_loggedin', 'You are now logged in');
 
                 redirect('posts');
             }
