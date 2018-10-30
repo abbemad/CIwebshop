@@ -15,4 +15,15 @@
             return $this->db->insert('users', $data);
         }
 
+        //check existing user
+        public function check_username_exists($username){
+            $query = $this->db->get_where('users', array('username' => $username));
+
+            if(empty($query->row_array())){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
     }
