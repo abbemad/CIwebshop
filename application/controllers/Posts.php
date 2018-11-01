@@ -32,7 +32,7 @@
         }
 
         public function create(){
-            // check loggedi n
+            // check loggedin
             if(!$this->session->userdata('logged_in')){
                 redirect('users/login');
             }
