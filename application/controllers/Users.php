@@ -47,11 +47,20 @@
                 $username = $this->input->post('username');    
                 // get hass pass
                 $password = $this->input->post('password');
-                $data_user = $this->user_model->login($username, $password);
+                $user_id = $this->user_model->login($username, $password);
 
-                if ($data_user){
+                if ($user_id){
                     // create session
-                    die('SUCCESS');
+                    // die('SUCCESS');
+
+                    $user_data = array(
+                        'user_id' => $user_id,
+                        'username' => $username,
+                        'logged_in' => true
+                    );
+
+                    $this->session->set_userdata($user_data);
+
                     $this->session->set_flashdata('user_loggedin', 'You are now logged in');
 
                     redirect('posts');
@@ -60,11 +69,22 @@
 
                     redirect('users/login');
                 }
-
             }
         }
+
+        public function logout(){
+            //unset userdata
+            $this->session->unset_userdata('logged_in');
+            $this->session->unset_userdata('user_id');
+            $this->session->unset_userdata('username');
+
+            $this->session->set_flashdata('user_loggedout', 'You are now logged out');
+
+            redirect('users/login');
+        }
+        
         // check username exists
-        function check_username_exists($username){
+        public function check_username_exists($username){
             $this->form_validation->set_message('check_username_exists', 'That username is already taken');
 
             if($this->user_model->check_username_exists($username)){
@@ -74,7 +94,7 @@
             }
         }
         // check email exists
-        function check_email_exists($email){
+        public function check_email_exists($email){
             $this->form_validation->set_message('check_email_exists', 'The email adress you entered is already in use');
 
             if($this->user_model->check_email_exists($email)){
@@ -83,7 +103,4 @@
                 return false;
             }
         }
-
-        // check password 
-        
     }
