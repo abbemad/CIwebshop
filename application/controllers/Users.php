@@ -20,6 +20,7 @@
 
                 //encrypt pass NOT use MD5
                 $enc_password = password_hash($this->input->post('password'), PASSWORD_DEFAULT); 
+                
 
                 $this->user_model->register($enc_password);
 
@@ -31,9 +32,8 @@
         //login user
         public function login(){
             $data['title'] = 'Sign In';
-
+             // $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('username', 'Username', 'required');
-            // $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('password', 'Password', 'required');
 
             if($this->form_validation->run() === FALSE){
@@ -43,26 +43,24 @@
 
                 
             } else{
-                //get username
-                $username = $this->input->post('username');
-                //get and encrypt password
+                // get username
+                $username = $this->input->post('username');    
+                // get hass pass
                 $password = $this->input->post('password');
+                $data_user = $this->user_model->login($username, $password);
 
-                $user_id = $this->user_model->login($username, $password);
-
-                if ($user_id){
+                if ($data_user){
                     // create session
-                    die('SUCCES');
-                    // message
+                    die('SUCCESS');
                     $this->session->set_flashdata('user_loggedin', 'You are now logged in');
 
                     redirect('posts');
                 } else {
-                    // message
                     $this->session->set_flashdata('login_failed', 'Login is invalid');
 
                     redirect('users/login');
                 }
+
             }
         }
         // check username exists
@@ -85,4 +83,7 @@
                 return false;
             }
         }
+
+        // check password 
+        
     }

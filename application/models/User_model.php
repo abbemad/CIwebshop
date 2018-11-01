@@ -15,19 +15,21 @@
             return $this->db->insert('users', $data);
         }
         // log user in
-        public function login($username, $password){
-            // validate
+        public function login($username, $password)
+        {
+
             $this->db->where('username', $username);
-            $this->db->where('password', $password);
-
-            $result = $this->db->get('users');
-
-            if($result->num_rows() == 1){
-                return $result->row(0)->id;
+            $query = $this->db->get('users');
+            $result = $query->row_array(); // get the row 
+        
+            if (!empty($result) && password_verify($password, $result['password'])) {
+                // if this username exists and the input password is verified using password_verify
+                return $result;
             } else {
                 return false;
             }
         }
+        
         //check existing user
         public function check_username_exists($username){
             $query = $this->db->get_where('users', array('username' => $username));
