@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Shop</title>
-            <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css"> 
+            <link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css"> 
             <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
             
             <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js"></script>     

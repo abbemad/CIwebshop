@@ -47,6 +47,7 @@
                 $username = $this->input->post('username');    
                 // get hass pass
                 $password = $this->input->post('password');
+                //log in user
                 $user_id = $this->user_model->login($username, $password);
 
                 if ($user_id){

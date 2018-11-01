@@ -14,6 +14,7 @@
         <input type="submit" value="delete" class="btn btn-danger">
     </form>
     <?php endif; ?>
+    
 <hr>
 <h3>Comments</h3>
 <?php if($comments) : ?>
