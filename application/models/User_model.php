@@ -24,7 +24,7 @@
         
             if (!empty($result) && password_verify($password, $result['password'])) {
                 // if this username exists and the input password is verified using password_verify
-                return $result;
+                return $result['id'];
             } else {
                 return false;
             }
