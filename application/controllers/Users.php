@@ -61,6 +61,7 @@
                     );
 
                     $this->session->set_userdata($user_data);
+                    
 
                     $this->session->set_flashdata('user_loggedin', 'You are now logged in');
 
