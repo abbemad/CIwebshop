@@ -22,4 +22,11 @@
             $query = $this->db->get_where('categories', array('id' => $id));
             return $query->row();
         }
+
+        public function delete_category($id){
+            $this->db->where('id', $id);
+            $this->db->delete('categories');
+            return true;
+        }
+
     }
