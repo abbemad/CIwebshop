@@ -29,7 +29,7 @@
 				'body' => $this->input->post('body'),
 				'category_id' => $this->input->post('category_id'),
                 'user_id' => $this->session->userdata('user_id'),
-				'product_image' => $product_image
+                'product_image' => $product_image
 			);
 			return $this->db->insert('products', $data);
 		}
@@ -47,7 +47,7 @@
                 'title' => $this->input->post('title'),
                 'slug' => $slug, 
                 'body' => $this->input->post('body'), 
-                'category_id' => $this->input->post('category_id'),
+                'category_id' => $this->input->post('category_id')
             );
 
             $this->db->where('id', $this->input->post('id'));
@@ -67,4 +67,14 @@
                 $query = $this->db->get_where('products', array('category_id'=> $category_id));
             return $query->result_array();
         }
+
+    //     public function get_products_by_price($price_id){
+    //         $this->db->order_by('products.id', 'DESC');
+    //         $this->db->join('prices', 'prices.id = products.price_id');
+    //             $query = $this->db->get_where('products', array('price_id'=> $price_id));
+    //         return $query->result_array();
+    //     }
+    
     }
+
+    

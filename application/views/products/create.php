@@ -4,11 +4,11 @@
 <?php echo form_open_multipart('products/create'); ?>
 
   <div class="form-group">
-    <label>Title</label>
+    <label>Name product</label>
     <input type="text" class="form-control" name="title" placeholder="Add title">
   </div>
   <div class="form-group">
-    <label>Body</label>
+    <label>Description</label>
     <textarea id="editor" type="password" class="form-control" name="body" placeholder="Add body"></textarea>
   </div>
   <div class="form-group">
@@ -19,6 +19,16 @@
         <?php endforeach;?>
       </select>
   </div>
+
+    <div class="form-group">
+    <label>Prices</label>
+      <select name="price_id" class="form-control">
+        <?php foreach($prices as $price):?>
+          <option value="<?php echo $price['id'];  ?>"><?php echo $price['price']; ?> </option>
+        <?php endforeach;?>
+      </select>
+  </div>
+
   <div class="form-group">
     <label>Upload image</label>
       <input type="file" name="userfile" size="20">

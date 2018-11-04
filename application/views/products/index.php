@@ -11,7 +11,7 @@
     <div class="col-md-9">
     <small class="product-date">Product added: <?php echo $product['created_at']; ?> in <strong> <?php echo $product['name']; ?> </strong> </small> 
         <br>
-            <?php echo word_limiter($product['body'], 50); ?> 
+            <?php echo word_limiter($product['body'], 50); ?>
             <br>
                 <p><a class="btn btn-default" href="<?php echo site_url('/products/'.$product['slug']); ?>">
                         Details
