@@ -7,6 +7,12 @@ $route['posts/update'] = 'posts/update';
 $route['posts/(:any)'] = 'posts/view/$1';
 $route['posts'] = 'posts/index';
 
+$route['products/index'] = 'products/index';
+$route['products/create'] = 'products/create';
+$route['products/update'] = 'products/update';
+$route['products/(:any)'] = 'products/view/$1';
+$route['products'] = 'products/index';
+
 $route['default_controller'] = 'pages/view';
 
 $route['categories'] = 'categories/index';
