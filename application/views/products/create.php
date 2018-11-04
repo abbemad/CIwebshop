@@ -26,7 +26,6 @@
       </select>
   </div>
 
-
   <div class="form-group">
     <label>Upload image</label>
       <input type="file" name="userfile" size="20">

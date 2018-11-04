@@ -45,6 +45,16 @@
             $this->load->view('templates/footer');
         }
 
+        public function products($id){
+            $data['title'] = $this->category_model->get_category($id)->name;
+
+            $data['products'] = $this->product_model->get_products_by_category($id);
+
+            $this->load->view('templates/header');
+            $this->load->view('products/index', $data);
+            $this->load->view('templates/footer');
+        }
+
         public function delete($id){
             //check login redirect
             if(!$this->session->userdata('logged_in')){

@@ -9,7 +9,7 @@
     </div>
 
     <div class="col-md-9">
-    <small class="product-date">Product added: <?php echo $product['created_at']; ?> in <strong> <?php echo $product['name']; ?> </strong> </small> 
+    <small class="product-date">Product added: <?php echo $product['created_at']; ?> in <strong> <?php echo $product['name']; ?>  </strong> </small> 
         <br>
             <h3> $ <?php echo $product['productprice']; ?> </h3>
         <br>
