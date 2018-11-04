@@ -5,8 +5,14 @@
 
   <div class="form-group">
     <label>Name product</label>
-    <input type="text" class="form-control" name="title" placeholder="Add title">
+    <input type="text" class="form-control" name="title" placeholder="Add product">
   </div>
+
+  <div class="form-group">
+    <label>Product price</label>
+    <input type="decimal" class="form-control" name="productprice" placeholder="Add new price">
+  </div>
+
   <div class="form-group">
     <label>Description</label>
     <textarea id="editor" type="password" class="form-control" name="body" placeholder="Add body"></textarea>
@@ -20,14 +26,6 @@
       </select>
   </div>
 
-    <div class="form-group">
-    <label>Prices</label>
-      <select name="price_id" class="form-control">
-        <?php foreach($prices as $price):?>
-          <option value="<?php echo $price['id'];  ?>"><?php echo $price['price']; ?> </option>
-        <?php endforeach;?>
-      </select>
-  </div>
 
   <div class="form-group">
     <label>Upload image</label>

@@ -1,7 +1,7 @@
 <h2><?= $title ?></h2>
 
 <?php foreach($products as $product) : ?>
-
+    
     <h3><?php echo $product['title']; ?></h3>
     <div class="row">
     <div class="col-md-3">
@@ -10,6 +10,8 @@
 
     <div class="col-md-9">
     <small class="product-date">Product added: <?php echo $product['created_at']; ?> in <strong> <?php echo $product['name']; ?> </strong> </small> 
+        <br>
+            <h3> $ <?php echo $product['productprice']; ?> </h3>
         <br>
             <?php echo word_limiter($product['body'], 50); ?>
             <br>

@@ -20,10 +20,6 @@ $route['categories/create'] = 'categories/create';
 $route['categories/posts/(:any)'] = 'categories/posts/$1';
 $route['categories/products/(:any)'] = 'categories/products/$1';
 
-$route['prices'] = 'prices/index';
-$route['prices/create'] = 'prices/create';
-$route['prices/(:any)'] = 'prices/products/$1';
-$route['prices/products/(:any)'] = 'prices/products/$1';
 
 $route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';
