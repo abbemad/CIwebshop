@@ -64,7 +64,10 @@ class User extends CI_Controller {
     $data['search'] = $search_text;
 
     // Load view
+    
+    $this->load->view('templates/header');
     $this->load->view('user_view',$data);
+    $this->load->view('templates/footer');
  
   }
 

@@ -12,22 +12,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    <!-- Posts List -->
    <table border='1' width='100%' style='border-collapse: collapse;'>
     <tr>
-      
-      <th>id</th>
       <th>Title</th>
       <th>Description</th>
+      <th>Image?</th>
     </tr>
     <?php 
-    $sno = $row+1;
+    // $sno = $row+1;
     foreach($result as $data){
 
       $content = substr($data['body'],0, 180)." ...";
       echo "<tr>";
-      echo "<td>".$sno."</td>";
+    //   echo "<td>".$sno."</td>";
       echo "<td><a href='".$data['slug']."' target='_blank'>".$data['title']."</a></td>";
       echo "<td>".$content."</td>";
       echo "</tr>";
-      $sno++;
+    //   $sno++;
 
     }
     if(count($result) == 0){
