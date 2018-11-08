@@ -36,7 +36,7 @@ class User extends CI_Controller {
     }
 
     // Row per page
-    $rowperpage = 5;
+    $rowperpage = 3;
 
     // Row position
     if($rowno != 0){
@@ -53,10 +53,17 @@ class User extends CI_Controller {
     $config['base_url'] = base_url().'index.php/User/loadRecord';
     $config['use_page_numbers'] = TRUE;
     $config['total_rows'] = $allcount;
-    $config['per_page'] = $rowperpage;
+    $config['per_page'] = 3;
+
+    $config['uri_segment'] = 3;
+    $config['attributes'] = array('class' => 'pagination-link');
 
     // Initialize
     $this->pagination->initialize($config);
+
+    $data['title'] = 'Searched posts';
+
+    // $data['posts'] = $this->post_model->get_posts(FALSE, $config['per_page'], $offset);
  
     $data['pagination'] = $this->pagination->create_links();
     $data['result'] = $users_record;
@@ -66,7 +73,7 @@ class User extends CI_Controller {
     // Load view
     
     $this->load->view('templates/header');
-    $this->load->view('user_view',$data);
+    $this->load->view('user_view_two',$data);
     $this->load->view('templates/footer');
  
   }
