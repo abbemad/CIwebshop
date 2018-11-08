@@ -13,7 +13,8 @@ $route['products/update'] = 'products/update';
 $route['products/(:any)'] = 'products/view/$1';
 $route['products'] = 'products/index';
 
-$route['default_controller'] = 'pages/view';
+// $route['default_controller'] = 'pages/view';
+$route['default_controller'] = 'User';
 
 $route['categories'] = 'categories/index';
 $route['categories/create'] = 'categories/create';
