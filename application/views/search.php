@@ -2,8 +2,9 @@
 
 <?php echo validation_errors();?>
 
-<form method='post' action="<?= base_url() ?>search/loadSearch" >
-    <input type='text' name='search' value='<?= $search ?>'><input type='submit' name='submit' value='Submit'>
+<form class="form-inline my-2 my-lg-0" method='post' action="<?= base_url() ?>search/loadSearch" >
+    <input class="form-control mr-sm-2" type='text' name='search' value='<?= $search ?>'>
+    <input class="btn btn-secondary my-2 my-sm-0" type='submit' name='submit' value='Search'>
 </form>
 
 <!-- foreach through products -->
