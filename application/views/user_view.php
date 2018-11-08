@@ -1,21 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Pagination with Search Filter in CodeIgniter</title>
-  
-    <style type="text/css">
-    a {
-     padding-left: 5px;
-     padding-right: 5px;
-     margin-left: 5px;
-     margin-right: 5px;
-    }
-    </style>
-  </head>
   <body>
 
    <!-- Search form (start) -->
@@ -27,9 +12,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    <!-- Posts List -->
    <table border='1' width='100%' style='border-collapse: collapse;'>
     <tr>
-      <th>S.no</th>
+      
+      <th>id</th>
       <th>Title</th>
-      <th>Body</th>
+      <th>Description</th>
     </tr>
     <?php 
     $sno = $row+1;
@@ -56,6 +42,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
    <div style='margin-top: 10px;'>
    <?= $pagination; ?>
    </div>
-
- </body>
-</html>
