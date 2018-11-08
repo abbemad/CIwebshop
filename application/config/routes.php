@@ -10,11 +10,16 @@ $route['posts'] = 'posts/index';
 $route['products/index'] = 'products/index';
 $route['products/create'] = 'products/create';
 $route['products/update'] = 'products/update';
+
+// $route['products/search'] = 'products/search';
+
 $route['products/(:any)'] = 'products/view/$1';
 $route['products'] = 'products/index';
 
-// $route['default_controller'] = 'pages/view';
-$route['default_controller'] = 'User';
+$route['default_controller'] = 'pages/view';
+// $route['default_controller'] = 'User';
+
+$route['search'] = 'search/index';
 
 $route['categories'] = 'categories/index';
 $route['categories/create'] = 'categories/create';
