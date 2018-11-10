@@ -1,7 +1,7 @@
 <h2> <?php echo $product['title']; ?></h2>
     <small class="product-date">product created: <?php echo $product['created_at']; ?> </small> <br>
 
-    <img src="<?php echo site_url(); ?>assets/images/products/<?php echo $product['product_image']; ?> ">
+    <img src="<?php echo site_url(); ?>assets/images/products/<?php echo $product['image']; ?> ">
 
         <div class="product-body">
             <?php echo $product['body']; ?>

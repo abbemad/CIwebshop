@@ -5,7 +5,7 @@
     <h3><?php echo $product['title']; ?></h3>
     <div class="row">
     <div class="col-md-3">
-    <img class="product-thumb thumbnail" src="<?php echo site_url(); ?>assets/images/products/<?php echo $product['product_image']; ?>">
+    <img class="product-thumb thumbnail" src="<?php echo site_url(); ?>assets/images/products/<?php echo $product['image']; ?>">
     </div>
 
     <div class="col-md-9">

@@ -19,7 +19,7 @@
             return $query->row_array();
         }
 
-        public function create_product($product_image){
+        public function create_product($image){
             $slug = url_title($this->input->post('title'));
             
 			$data = array(
@@ -28,7 +28,7 @@
 				'body' => $this->input->post('body'),
 				'category_id' => $this->input->post('category_id'),
                 'user_id' => $this->session->userdata('user_id'),
-                'product_image' => $product_image,
+                'image' => $image,
                 'price' => $this->input->post('price')
 			);
 			return $this->db->insert('products', $data);

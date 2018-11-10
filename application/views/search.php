@@ -14,7 +14,7 @@
     <h3> <?php echo $data['title']; ?> </h3>
     <div class="row">
     <div class="col-md-3">
-    <img class="product-thumb thumbnail" src="<?php echo site_url(); ?>assets/images/products/<?php echo $data['product_image']; ?>">
+    <img class="product-thumb thumbnail" src="<?php echo site_url(); ?>assets/images/products/<?php echo $data['image']; ?>">
     </div>
 
     <div class="col-md-9">

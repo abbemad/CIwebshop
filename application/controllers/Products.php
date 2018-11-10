@@ -69,13 +69,13 @@
 
                 if(!$this->upload->do_upload()){
                     $errors = array('error' => $this->upload->display_errors());
-                    $product_image = 'noimage.jpg';
+                    $image = 'noimage.jpg';
                 } else {
                     $data = array('upload_date' => $this->upload->data());
-                    $product_image = $_FILES['userfile']['name'];
+                    $image = $_FILES['userfile']['name'];
                 }
 
-               $this->product_model->create_product($product_image);
+               $this->product_model->create_product($image);
 
                // create flashmessage
                $this->session->set_flashdata('product_created', 'Your product has been created');
