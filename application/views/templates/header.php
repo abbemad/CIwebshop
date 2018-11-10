@@ -19,7 +19,6 @@
                         <li><a href="<?php echo base_url(); ?>categories">Categories</a></li>
                         <li><a href="<?php echo base_url(); ?>products">Products</a></li>
                         <li><a href="<?php echo base_url(); ?>search">Search</a></li>
-                        <li><a href="<?php echo base_url(); ?>cart">Shoppingcart</a></li>
                     </ul>
                     <ul class= "nav navbar-nav navbar-right">
                     <?php if(!$this->session->userdata('logged_in')) : ?>

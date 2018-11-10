@@ -50,7 +50,7 @@
             $data['categories'] = $this->product_model->get_categories();
 
             $this->form_validation->set_rules('title', 'Product', 'required');
-            $this->form_validation->set_rules('productprice', 'Price', 'required');
+            $this->form_validation->set_rules('price', 'Price', 'required');
 
             if ($this->form_validation->run() === FALSE){
 

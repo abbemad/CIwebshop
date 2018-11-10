@@ -11,7 +11,7 @@
     <div class="col-md-9">
     <small class="product-date">Product added: <?php echo $product['created_at']; ?> in <strong> <?php echo $product['name']; ?>  </strong> </small> 
         <br>
-            <h3> $ <?php echo $product['productprice']; ?> </h3>
+            <h3> $ <?php echo $product['price']; ?> </h3>
         <br>
             <?php echo word_limiter($product['body'], 50); ?>
             <br>

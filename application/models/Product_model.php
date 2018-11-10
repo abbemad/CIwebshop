@@ -29,7 +29,7 @@
 				'category_id' => $this->input->post('category_id'),
                 'user_id' => $this->session->userdata('user_id'),
                 'product_image' => $product_image,
-                'productprice' => $this->input->post('productprice')
+                'price' => $this->input->post('price')
 			);
 			return $this->db->insert('products', $data);
 		}
@@ -48,7 +48,7 @@
                 'slug' => $slug, 
                 'body' => $this->input->post('body'), 
                 'category_id' => $this->input->post('category_id'),
-                'productprice' => $this->input->post('productprice')
+                'price' => $this->input->post('price')
             );
 
             $this->db->where('id', $this->input->post('id'));

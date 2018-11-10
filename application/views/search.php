@@ -20,7 +20,7 @@
     <div class="col-md-9">
     <small class="product-date">Product added: <?php echo $data['created_at']; ?> </small> 
         <br>
-        <h3> $ <?php echo $data['productprice']; ?> </h3>
+        <h3> $ <?php echo $data['price']; ?> </h3>
         <br>
             <?php echo word_limiter($data['body'], 50); ?> 
         <br>

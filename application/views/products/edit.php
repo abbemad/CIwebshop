@@ -12,7 +12,7 @@
   
   <div class="form-group">
     <label>Product price</label>
-    <input type="decimal" class="form-control" name="productprice" placeholder="Change price"  value="<?php echo $product['productprice']; ?>">
+    <input type="decimal" class="form-control" name="price" placeholder="Change price"  value="<?php echo $product['price']; ?>">
   </div>
 
   <div class="form-group">
