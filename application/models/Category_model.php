@@ -5,14 +5,14 @@
         }
 
         public function get_categories(){
-            $this->db->order_by('name');
+            $this->db->order_by('category_name');
             $query = $this->db->get('categories');
             return $query->result_array();
         }
 
         public function create_category(){
             $data = array(
-                'name'=> $this->input->post('name'),
+                'category_name'=> $this->input->post('category_name'),
                 'user_id' => $this->session->userdata('user_id')
             );
 

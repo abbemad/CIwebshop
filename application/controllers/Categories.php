@@ -19,7 +19,7 @@
             
             $data['title'] = 'Create Category';
 
-            $this->form_validation->set_rules('name', 'Name', 'required');
+            $this->form_validation->set_rules('category_name', 'Category name', 'required');
 
             if ($this->form_validation->run() === FALSE){
                 $this->load->view('templates/header');
@@ -36,7 +36,7 @@
         }
 
         public function posts($id){
-            $data['title'] = $this->category_model->get_category($id)->name;
+            $data['title'] = $this->category_model->get_category($id)->category_name;
 
             $data['posts'] = $this->post_model->get_posts_by_category($id);
 
@@ -46,7 +46,7 @@
         }
 
         public function products($id){
-            $data['title'] = $this->category_model->get_category($id)->name;
+            $data['title'] = $this->category_model->get_category($id)->category_name;
 
             $data['products'] = $this->product_model->get_products_by_category($id);
 

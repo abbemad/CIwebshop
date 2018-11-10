@@ -4,9 +4,11 @@
     
     <h3>
     <?php 
+
+    // fixed
     // need to edit category: name to category_name echo $product['name'];
     // currently product echos slug instead of name because name is used in category so it displays category instead of name product
-    echo $product['slug']; ?>
+    echo $product['name']; ?>
     
     </h3>
     <div class="row">
@@ -15,7 +17,7 @@
     </div>
 
     <div class="col-md-9">
-    <small class="product-date">Product added: <?php echo $product['created_at']; ?> in <strong> <?php echo $product['name']; ?>  </strong> </small> 
+    <small class="product-date">Product added: <?php echo $product['created_at']; ?> in <strong> <?php echo $product['category_name']; ?>  </strong> </small> 
         <br>
             <h3> $ <?php echo $product['price']; ?> </h3>
         <br>

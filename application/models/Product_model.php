@@ -20,10 +20,10 @@
         }
 
         public function create_product($image){
-            $slug = url_title($this->input->post('title'));
+            $slug = url_title($this->input->post('name'));
             
 			$data = array(
-				'title' => $this->input->post('title'),
+				'name' => $this->input->post('name'),
                 'slug' => $slug,
 				'body' => $this->input->post('body'),
 				'category_id' => $this->input->post('category_id'),
@@ -41,10 +41,10 @@
         }
 
         public function update_product(){
-            $slug = url_title($this->input->post('title'));
+            $slug = url_title($this->input->post('name'));
 
             $data = array(
-                'title' => $this->input->post('title'),
+                'name' => $this->input->post('name'),
                 'slug' => $slug, 
                 'body' => $this->input->post('body'), 
                 'category_id' => $this->input->post('category_id'),
@@ -57,7 +57,7 @@
         }
 
         public function get_categories(){
-            $this->db->order_by('name');
+            $this->db->order_by('category_name');
             $query = $this->db->get('categories');
             return $query->result_array();
         }
@@ -76,7 +76,7 @@
             $this->db->order_by('products.id', 'DESC');
         
             if($search != ''){
-              $this->db->like('title', $search);
+              $this->db->like('name', $search);
               $this->db->or_like('body', $search);
             }
         
@@ -93,7 +93,7 @@
             $this->db->from('products');
          
             if($search != ''){
-              $this->db->like('title', $search);
+              $this->db->like('name', $search);
               $this->db->or_like('body', $search);
             }
         

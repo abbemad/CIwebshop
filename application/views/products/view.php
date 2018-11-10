@@ -1,5 +1,5 @@
 <h2> <?php echo $product['name']; ?></h2>
-    <small class="product-date">product created: <?php echo $product['created_at']; ?> </small> <br>
+    <small class="product-date">product created: <?php echo $product['created_at']; ?>  </small> <br>
 
     <img src="<?php echo site_url(); ?>assets/images/products/<?php echo $product['image']; ?> ">
 
