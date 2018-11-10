@@ -14,7 +14,7 @@ Class Search_model extends CI_Model {
     $this->db->order_by('products.id', 'DESC');
 
     if($search != ''){
-      $this->db->like('title', $search);
+      $this->db->like('name', $search);
       $this->db->or_like('body', $search);
     }
 
@@ -31,7 +31,7 @@ Class Search_model extends CI_Model {
     $this->db->from('products');
  
     if($search != ''){
-      $this->db->like('title', $search);
+      $this->db->like('name', $search);
       $this->db->or_like('body', $search);
     }
 

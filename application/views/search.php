@@ -11,7 +11,7 @@
 <?php foreach($result as $data) : ?>
 
     <?php $content = substr($data['body'],0,180)."..."; ?>
-    <h3> <?php echo $data['title']; ?> </h3>
+    <h3> <?php echo $data['name']; ?> </h3>
     <div class="row">
     <div class="col-md-3">
     <img class="product-thumb thumbnail" src="<?php echo site_url(); ?>assets/images/products/<?php echo $data['image']; ?>">

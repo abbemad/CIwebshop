@@ -5,7 +5,7 @@
 
   <div class="form-group">
     <label>Name product</label>
-    <input type="text" class="form-control" name="title" placeholder="Add product">
+    <input type="text" class="form-control" name="name" placeholder="Add product">
   </div>
 
   <div class="form-group">

@@ -2,7 +2,7 @@
 
 <?php foreach($products as $product) : ?>
     
-    <h3><?php echo $product['title']; ?></h3>
+    <h3><?php echo $product['name']; ?></h3>
     <div class="row">
     <div class="col-md-3">
     <img class="product-thumb thumbnail" src="<?php echo site_url(); ?>assets/images/products/<?php echo $product['image']; ?>">

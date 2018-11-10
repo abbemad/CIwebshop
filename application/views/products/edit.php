@@ -6,7 +6,7 @@
 	<input type="hidden" name="id" value="<?php echo $product['id']; ?>">
   <div class="form-group">
     <label>Name product</label>
-    <input type="text" class="form-control" name="title" placeholder="Change product" value="<?php echo $product['title']; ?>">
+    <input type="text" class="form-control" name="name" placeholder="Change product" value="<?php echo $product['name']; ?>">
   </div>
 
   

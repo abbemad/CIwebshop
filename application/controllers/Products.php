@@ -32,7 +32,7 @@
                 show_404();
             }
 
-            $data['title'] = $data['product']['title'];
+            $data['title'] = $data['product']['name'];
 
             $this->load->view('templates/header');
             $this->load->view('products/view', $data);
@@ -49,7 +49,7 @@
             
             $data['categories'] = $this->product_model->get_categories();
 
-            $this->form_validation->set_rules('title', 'Product', 'required');
+            $this->form_validation->set_rules('name', 'Product', 'required');
             $this->form_validation->set_rules('price', 'Price', 'required');
 
             if ($this->form_validation->run() === FALSE){
