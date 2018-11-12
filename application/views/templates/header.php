@@ -18,12 +18,15 @@
                         <li><a href="<?php echo base_url(); ?>posts">Posts</a></li>
                         <li><a href="<?php echo base_url(); ?>categories">Categories</a></li>
                         <li><a href="<?php echo base_url(); ?>products">Products</a></li>
+                        <li><a href="<?php echo base_url(); ?>product">Product</a></li>
                         <li><a href="<?php echo base_url(); ?>search">Search</a></li>
                     </ul>
+                        <?php if(isset($content)){ echo $content; } ?>
                     <ul class= "nav navbar-nav navbar-right">
                     <?php if(!$this->session->userdata('logged_in')) : ?>
                         <li><a href="<?php echo base_url(); ?>users/login">Login</a></li>
                         <li><a href="<?php echo base_url(); ?>users/register">Register</a></li>
+                        <li><a href="<?php echo base_url(); ?>checkout"><i class="glyphicon glyphicon-shopping-cart"></i>Checkout</a></li>
                     <?php endif; ?>
                     <?php if($this->session->userdata('logged_in')) : ?>
                         <li><a href="<?php echo base_url(); ?>products/create">Create Product</a></li>

@@ -17,6 +17,8 @@ $route['products/(:any)'] = 'products/view/$1';
 $route['products'] = 'products/index';
 
 $route['default_controller'] = 'pages/view';
+$route['product'] = 'product';
+$route['cart'] = 'cart';
 // $route['default_controller'] = 'User';
 
 $route['search'] = 'search/index';

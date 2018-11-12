@@ -111,9 +111,6 @@
             }
             
             $data['categories'] = $this->product_model->get_categories();
-            
-           
-
         
             if(empty($data['product'])){
                 show_404();

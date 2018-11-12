@@ -103,6 +103,13 @@
             return $result[0]['allcount'];
           }
 
+            function product(){
+            return $q = $this->db->select('*')->from('products')->get()->result();
+            }
+
+            function product_detail($id){
+            return $q = $this->db->select('*')->from('products')->where('id',$id)->get()->row();
+            }
 
     }
 
